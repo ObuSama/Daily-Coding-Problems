@@ -1,2 +1,2 @@
 # dailycodingproblems
-some interesting problems
+some interesting problems for learning coding and algorithms
