@@ -25,16 +25,18 @@ def solution(num,den):
       
     else:
         
-        unit = math.ceil(den/num)
+        unit = den//num+1
         return unit
             
 def egyptian_decimal(num,den):
     unit = solution(num,den)
-    if unit is not None:
-        numerator = num*unit - den
-        denominator = unit*den
-        return f"+ 1/{unit} "+egyptian_decimal(numerator,denominator)
-    return ""
+    if unit is None:
+        return ""
+    
+    numerator = num*unit - den
+    denominator = unit*den
+    return f"+ 1/{unit} "+egyptian_decimal(numerator,denominator)
+   
 
 
 print(egyptian_decimal(4,13))
